@@ -38,6 +38,4 @@ models:
   sub_project:
     # Applies to all files under models/example/
     staging_models:
-      +materialized: view
-    staging_models:
       +materialized: table
