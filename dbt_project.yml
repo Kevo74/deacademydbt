@@ -49,5 +49,6 @@ models:
           +schema: silver
           +materialized: table
     gold:
+          +database: PC_DBT_DB    
           +schema: gold
           +materialized: view
