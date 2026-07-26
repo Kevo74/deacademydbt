@@ -13,7 +13,7 @@ vars:
    wrk_schema: BRONZE
    file_format_csv: MYDB.BRONZE.MY_CSV_FORMAT
    purge_status: FALSE
-   stage_name: MYDB.BRONZE.MY_S3_STAGE
+   stage_name: MYDB.BRONZE.S3_TEST_STAGE
    rawhist_db: MYDB
 
 # These configurations specify where dbt should look for different types of files.
@@ -45,6 +45,7 @@ clean-targets:         # directories to be removed by `dbt clean`
 models:
   kevin_dbt_project:
     silver:
+          +database: PC_DBT_DB
           +schema: silver
           +materialized: table
     gold:
